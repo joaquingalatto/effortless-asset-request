@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "display_name": "Hero (Banner)",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/hero/hero",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1440 x 810",
+      "padding": "Top: 65 | Right: 65 | Bottom: 65 | Left: 65",
+      "padding_reference_image": "/catalog-images/page004_img002.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1030x1831px",
+      "padding": "Top: 68 | Right: 115 | Bottom: 68 | Left: 115",
+      "padding_reference_image": "/catalog-images/page004_img003.png"
+    }
+  },
+  "hero_carousel": {
+    "display_name": "Hero Carousel",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/hero/hero-carousel",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1440 x 810",
+      "padding": "Top: 65 | Right: 65 | Bottom: 65 | Left: 65",
+      "padding_reference_image": "/catalog-images/page005_img002.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1030x1831px",
+      "padding": "Top: 68 | Right: 115 | Bottom: 68 | Left: 115",
+      "padding_reference_image": "/catalog-images/page005_img005.png"
+    }
+  },
+  "content_card": {
+    "display_name": "Content Card",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/cards/content-card",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 704 x 528px",
+      "padding": "Top: 65 | Right: 65 | Bottom: 65 | Left: 65",
+      "padding_reference_image": "/catalog-images/page009_img001.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1030x1831px",
+      "padding": "Top: 95 | Right: 95 | Bottom: 95 | Left: 95",
+      "padding_reference_image": "/catalog-images/page009_img002.png"
+    }
+  },
+  "campaign_card": {
+    "display_name": "Campaign Card",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/cards/campaign-card",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1280 x 1024px",
+      "padding": "Top: 0 | Right: 0 | Bottom: 0 | Left: 180",
+      "padding_reference_image": "/catalog-images/page007_img003.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1198x898px",
+      "padding": "Top: 300px/0px | Right: 0 | Bottom: 300px/0px | Left: 0",
+      "padding_reference_image": "/catalog-images/page007_img004.png"
+    }
+  },
+  "promo_plus_header": {
+    "display_name": "Promo Plus Header",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/promos/instant-win/with-pin-with-quiz",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1280 x 1024px",
+      "padding": "Top: 60 | Right: 60 | Bottom: 60 | Left: 60",
+      "padding_reference_image": "/catalog-images/page005_img005.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1198x898px",
+      "padding": "Top: 80 | Right: 80 | Bottom: 80 | Left: 80",
+      "padding_reference_image": "/catalog-images/page005_img005.png"
+    }
+  },
+  "quiz_question": {
+    "display_name": "Quiz Question",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/promos/instant-win/with-pin-with-quiz",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 460 x 307 (3:2)",
+      "padding": "Top: 60 | Right: 60 | Bottom: 60 | Left: 60",
+      "padding_reference_image": "/catalog-images/page006_img002.png"
+    },
+    "mobile": {
+      "size": "Mobile: 328 x 219 (3:2)",
+      "padding": "Top: 80 | Right: 80 | Bottom: 80 | Left: 80",
+      "padding_reference_image": "/catalog-images/page006_img002.png"
+    }
+  },
+  "general_card": {
+    "display_name": "General Card",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/cards/general-card",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1000 x 1000",
+      "padding": "Top: 60 | Right: 60 | Bottom: 60 | Left: 60",
+      "padding_reference_image": "/catalog-images/page006_img002.png"
+    },
+    "mobile": {
+      "size": "Mobile: 1000 x 1000",
+      "padding": "Top: 80 | Right: 80 | Bottom: 80 | Left: 80",
+      "padding_reference_image": "/catalog-images/page006_img002.png"
+    }
+  },
+  "campaign_card_full_bleed": {
+    "display_name": "Campaign Card Full Bleed",
+    "demo_url": "https://www.coca-cola.com/zz/en/demo/components/cards/campaign-card",
+    "format": "JPG O PNG",
+    "max_weight": "Weight: keep under 300KB",
+    "editable": "PS/AI",
+    "desktop": {
+      "size": "Desktop: 1280 x 1024px",
+      "padding": "Top: 68/empty | Right: 68 | Bottom: 68/empty | Left: 68",
+      "padding_reference_image": "/catalog-images/page008_img002.png"
+    },
+    "mobile": {
+      "size": "Mobile: 599 x 1065",
+      "padding": "Top: 55/empty | Right: 55 | Bottom: 55/empty | Left: 55",
+      "padding_reference_image": "/catalog-images/page008_img005.png"
+    }
+  }
+}
