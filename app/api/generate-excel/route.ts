@@ -68,7 +68,6 @@ function loadCatalog(): ComponentCatalog {
 function loadPublicImage(imagePath: string): Buffer | null {
   try {
     if (!imagePath) return null;
-    // imagePath is like "/catalog-images/page004_img002.png"
     const fullPath = path.join(process.cwd(), "public", imagePath);
     if (fs.existsSync(fullPath)) {
       return fs.readFileSync(fullPath);
@@ -77,6 +76,12 @@ function loadPublicImage(imagePath: string): Buffer | null {
   } catch {
     return null;
   }
+}
+
+// Resolve padding reference image path by canonical naming:
+// /catalog-images/{catalogKey}__{platform}_padding_ref.png
+function getPaddingRefImagePath(catalogKey: string, platform: "desktop" | "mobile"): string {
+  return `catalog-images/${catalogKey}__${platform}_padding_ref.png`;
 }
 
 function base64ToBuffer(dataUrl: string): Buffer | null {
@@ -311,21 +316,21 @@ export async function POST(request: NextRequest) {
       if (isMapped && catalogEntry) {
         r1.getCell(COL.SIZE).value = catalogEntry.desktop.size;
         r1.getCell(COL.PADDING).value = catalogEntry.desktop.padding;
-        r1.getCell(COL.PADDING_REF).value = catalogEntry.desktop.padding;
+        // PADDING_REF cell: image only, NO text
+        r1.getCell(COL.PADDING_REF).value = "";
 
-        // Embed desktop padding reference image in column M (COL.PADDING_REF)
-        if (catalogEntry.desktop.padding_reference_image) {
-          const padImgBuf = loadPublicImage(catalogEntry.desktop.padding_reference_image);
-          if (padImgBuf) {
-            try {
-              const padImgId = workbook.addImage({ buffer: padImgBuf, extension: "png" });
-              sheet.addImage(padImgId, {
-                tl: { col: COL.PADDING_REF - 1, row: desktopRowNum - 1 },
-                ext: { width: 120, height: 100 },
-              });
-            } catch (e) {
-              console.error("Failed to embed desktop padding ref image for", mapping.componentName, e);
-            }
+        // Embed desktop padding reference image by canonical name
+        const desktopPadPath = getPaddingRefImagePath(mapping.catalogKey, "desktop");
+        const desktopPadBuf = loadPublicImage(desktopPadPath);
+        if (desktopPadBuf) {
+          try {
+            const padImgId = workbook.addImage({ buffer: desktopPadBuf, extension: "png" });
+            sheet.addImage(padImgId, {
+              tl: { col: COL.PADDING_REF - 1, row: desktopRowNum - 1 },
+              ext: { width: 120, height: 100 },
+            });
+          } catch (e) {
+            console.error("Failed to embed desktop padding ref image for", mapping.componentName, e);
           }
         }
       } else {
@@ -347,21 +352,21 @@ export async function POST(request: NextRequest) {
       if (isMapped && catalogEntry) {
         r2.getCell(COL.SIZE).value = catalogEntry.mobile.size;
         r2.getCell(COL.PADDING).value = catalogEntry.mobile.padding;
-        r2.getCell(COL.PADDING_REF).value = catalogEntry.mobile.padding;
+        // PADDING_REF cell: image only, NO text
+        r2.getCell(COL.PADDING_REF).value = "";
 
-        // Embed mobile padding reference image in column M (COL.PADDING_REF)
-        if (catalogEntry.mobile.padding_reference_image) {
-          const padImgBuf = loadPublicImage(catalogEntry.mobile.padding_reference_image);
-          if (padImgBuf) {
-            try {
-              const padImgId = workbook.addImage({ buffer: padImgBuf, extension: "png" });
-              sheet.addImage(padImgId, {
-                tl: { col: COL.PADDING_REF - 1, row: mobileRowNum - 1 },
-                ext: { width: 120, height: 100 },
-              });
-            } catch (e) {
-              console.error("Failed to embed mobile padding ref image for", mapping.componentName, e);
-            }
+        // Embed mobile padding reference image by canonical name
+        const mobilePadPath = getPaddingRefImagePath(mapping.catalogKey, "mobile");
+        const mobilePadBuf = loadPublicImage(mobilePadPath);
+        if (mobilePadBuf) {
+          try {
+            const padImgId = workbook.addImage({ buffer: mobilePadBuf, extension: "png" });
+            sheet.addImage(padImgId, {
+              tl: { col: COL.PADDING_REF - 1, row: mobileRowNum - 1 },
+              ext: { width: 120, height: 100 },
+            });
+          } catch (e) {
+            console.error("Failed to embed mobile padding ref image for", mapping.componentName, e);
           }
         }
       } else {
