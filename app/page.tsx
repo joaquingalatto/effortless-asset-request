@@ -55,9 +55,9 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-[1100px] px-6 py-8">
           {/* Header */}
           <header className="mb-12 text-center">
-            {/* Top brand row (VML logo + UX TEAM SVG) */}
-            <div className="mb-8 flex items-center justify-center gap-6">
-              {/* VML Logo */}
+            {/* Top brand row: logos aligned to card edges */}
+            <div className="mb-8 flex items-center justify-between">
+              {/* VML Logo — left edge */}
               <Image
                 src="/vml_logo.svg"
                 alt="VML"
@@ -67,7 +67,7 @@ export default function HomePage() {
                 priority
               />
 
-              {/* UX TEAM (SVG) */}
+              {/* UX TEAM — right edge */}
               <Image
                 src="/ux_team_logo.svg"
                 alt="UX TEAM"
