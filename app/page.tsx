@@ -79,12 +79,14 @@ export default function HomePage() {
             </div>
 
             {/* Title */}
-            <h1 className="mb-3 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-              Effortless{" "}
+            <h1 className="mb-1 text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
               <span className="bg-gradient-to-r from-[#e6ff00] to-[#c4d900] bg-clip-text text-transparent">
-                Asset Request
+                ARO
               </span>
             </h1>
+            <p className="mb-3 text-lg font-semibold tracking-widest text-zinc-400 uppercase">
+              Asset Request Optimization
+            </p>
 
             {/* Subtitle */}
             <p className="mx-auto max-w-2xl text-lg text-zinc-400">
